@@ -1,10 +1,12 @@
 <?php
 
+require_once "Piloto";
+require_once "Aeronave";
 class LinhaAerea {
-  private string $rotasCadastradas;
-  private string $horariosDeVoos;
-  private string $aeronaves
-  private string $pilotos
+  public string $rotasCadastradas;
+  public string $horariosDeVoos;
+  public Aeronave $modelo;
+  public Piloto $nome;
 
   public function __construct() {
 }

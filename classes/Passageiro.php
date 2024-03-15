@@ -1,15 +1,31 @@
 <?php
 
 class Passageiro {
-    public string $bilhete;
-    public string $bagagem;
-    public string $nome;
+    private Bilhete $numeroDeIdentificacao;
+    private string $bagagem;
+    private string $nome;
     
 
     public function __construct() {
     
     }
 
+    public function setNumeroDeIdentificacao(Bilhete $numeroDeIdentificacao) : void {
+        $this->numeroDeIdentificacao = $numeroDeIdentificacao;
+    }
+
+    public function getNumeroDeIdentificacao() : Bilhete {
+        return $this->numeroDeIdentificacao;
+    }
+    
+    public function setBagagem(string $bagagem) : void {
+        $this->bagagem = $bagagem;
+    }
+
+    public function getBagagem() : string {
+        return $this->bagagem;
+    }
+    
     public function setNome(string $nome) : void {
         $this->nome = $nome;
     }

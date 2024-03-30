@@ -9,7 +9,8 @@ class Bilhete {
     private string $data;
     private string $numeroDeIdentificacao;
 
-    public function __construct() {
+    public function __construct(Passageiro $nome, string $origem, string $destino, string $data, int $numeroDeIdentificacao) {
+
     }
 
     public function setNome(Passageiro $nome) : void 

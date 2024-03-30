@@ -5,8 +5,10 @@ class Piloto {
     private string $registroRAB;
     private int $tempoDeVoo;
 
-    public function __construct() {
-    
+    public function __construct(string $nome, string $registroRAB, int $tempoDeVoo) {
+        $this->nome = $nome;
+        $this->registroRAB = $registroRAB;
+        $this->tempoDeVoo = $tempoDeVoo;
     }
 
 
@@ -26,7 +28,7 @@ class Piloto {
         return $this->registroRAB;
     }
 
-    public function setTempoDeVoo(string $tempoDeVoo) : void {
+    public function setTempoDeVoo(int $tempoDeVoo) : void {
         $this->tempoDeVoo = $tempoDeVoo;
     }
 

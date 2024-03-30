@@ -1,21 +1,26 @@
 <?php
 
-class Aeronave {
+class Aeronave
+{
     private string $modelo;
     private int $capacidade;
     private string $tipo;
     private string $status;
 
-    public function __construct() {
-    
+    public function __construct(string $modelo, int $capacidade, string $tipo, string $status)
+    {
+        $this->modelo = $modelo;
+        $this->capacidade = $capacidade;
+        $this->tipo = $tipo;
+        $this->status = $status;
     }
 
-    public function setModelo(string $modelo) : void 
+    public function setModelo(string $modelo): void
     {
         $this->modelo = $modelo;
     }
 
-    public function getModelo (): string 
+    public function getModelo(): string
     {
         return $this->modelo;
     }
@@ -30,40 +35,40 @@ class Aeronave {
         return $this->capacidade;
     }
 
-    public function setTipo(string $tipo): void 
+    public function setTipo(string $tipo): void
     {
         $this->tipo = $tipo;
     }
 
-    public function getTipo (): string 
+    public function getTipo(): string
     {
         return $this->tipo;
     }
 
-    public function setStatus(string $status) : void 
+    public function setStatus(string $status): void
     {
         $this->status = $status;
     }
 
-    public function getStatus(): string 
+    public function getStatus(): string
     {
         return $this->status;
     }
-    
+
     // public function decolar(): void {
-        
+
     // }
 
     // public function pousar(): void {
-        
+
     // }
 
     // public function abastecer(): void {
-        
+
     // }
 
     // public function estacionar(): void {
-        
+
     // }
 
 }

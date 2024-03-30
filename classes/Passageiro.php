@@ -6,8 +6,10 @@ class Passageiro {
     private string $nome;
     
 
-    public function __construct() {
-    
+    public function __construct(Bilhete $bilhete, string $bagagem, string $nome) {
+        $this->numeroDeIdentificacao = $bilhete;
+        $this->bagagem = $bagagem;
+        $this->nome = $nome;
     }
 
     public function setNumeroDeIdentificacao(Bilhete $numeroDeIdentificacao) : void {

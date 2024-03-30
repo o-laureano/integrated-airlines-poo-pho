@@ -3,25 +3,29 @@
 require_once "Piloto.php";
 require_once "Aeronave.php";
 class LinhaAerea {
-  private string $rotasCadastradas;
-  private string $horarioDeVoo;
+  private array $rotasCadastradas = [];
+  private int $horarioDeVoo;
   private Aeronave $modelo;
   private Piloto $nome;
 
-  public function __construct() {
-}
+  public function __construct(array $rota, int $horarioDeVoo, Aeronave $aeronave, Piloto $piloto) {
+    $this->rotasCadastradas[] = $rota;
+    $this->horarioDeVoo =  $horarioDeVoo;
+    $this->modelo = $aeronave;
+    $this->nome = $piloto; 
+  }
 
-    public function setRotasCadastradas(string $rotasCadastradas) : void 
+    public function setRotasCadastradas(array $rotasCadastradas, int $horarioDeVoo, Aeronave $aeronave, Piloto $piloto) : void 
     {
         $this->rotasCadastradas = $rotasCadastradas;
     }
 
-    public function getRotasCadastradas() : string 
+    public function getRotasCadastradas() : array 
     {
         return $this->rotasCadastradas;
     }
 
-    public function setHorarioDeVoo(string $horarioDeVoo) : void 
+    public function setHorarioDeVoo(int $horarioDeVoo) : void 
     {
         $this->horarioDeVoo = $horarioDeVoo;
     }

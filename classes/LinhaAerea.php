@@ -8,16 +8,16 @@ class LinhaAerea {
   private Aeronave $modelo;
   private Piloto $nome;
 
-  public function __construct(array $rota, int $horarioDeVoo, Aeronave $aeronave, Piloto $piloto) {
+  public function __construct(string $rota, int $horarioDeVoo, Aeronave $aeronave, Piloto $piloto) {
     $this->rotasCadastradas[] = $rota;
     $this->horarioDeVoo =  $horarioDeVoo;
     $this->modelo = $aeronave;
     $this->nome = $piloto; 
   }
 
-    public function setRotasCadastradas(array $rotasCadastradas, int $horarioDeVoo, Aeronave $aeronave, Piloto $piloto) : void 
+    public function setRotasCadastradas(string $rota) : void
     {
-        $this->rotasCadastradas = $rotasCadastradas;
+        $this->rotasCadastradas[] = $rota;
     }
 
     public function getRotasCadastradas() : array 
@@ -50,9 +50,9 @@ class LinhaAerea {
         $this->nome = $nome;
     }
 
-    public function getNome() : Piloto
+    public function getNome() : string
     {
-        return $this->nome;
+        return $this->nome->getNome();
     }
 
 // public function agendarVoo() : void {

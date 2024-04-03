@@ -54,19 +54,19 @@ class Aeroporto {
         return $this->tipo;
     }
 
-    public function checkIn(): void {
-        
-    }
-
-    public function checkOut(): void {
-        
-    }
-
-    public function pesarBagagem(): void {
-        
-    }
-    
-    public function revistarPassageiros(): void {
-        
-    }
+//    public function checkIn(): void {
+//
+//    }
+//
+//    public function checkOut(): void {
+//
+//    }
+//
+//    public function pesarBagagem(): void {
+//
+//    }
+//
+//    public function revistarPassageiros(): void {
+//
+//    }
 }

@@ -4,13 +4,15 @@ require_once "Passageiro.php";
 
 class Bilhete {
     private Passageiro $nome;
-    private string $origem;
-    private string $destino;
+    private LinhaAerea $rotasCadastradas;
     private string $data;
     private string $numeroDeIdentificacao;
 
-    public function __construct(Passageiro $nome, string $origem, string $destino, string $data, int $numeroDeIdentificacao) {
-
+    public function __construct(Passageiro $nome, LinhaAerea $rotasCadastradas, string $data, string $numeroDeIdentificacao) {
+        $this->nome = $nome;
+        $this->rotasCadastradas = $rotasCadastradas;
+        $this->data = $data;
+        $this->numeroDeIdentificacao = $numeroDeIdentificacao;
     }
 
     public function setNome(Passageiro $nome) : void 
@@ -24,24 +26,13 @@ class Bilhete {
     }
 
 
-    public function setOrigem(string $origem) : void 
+    public function setRotas(LinhaAerea $rota) : void
     {
-        $this->origem = $origem;
+        $this->rotasCadastradas = $rota;
     }
-
-    public function getOrigem() : string 
+    public function getRotas(LinhaAerea $rota) : LinhaAerea
     {
-        return $this->origem;
-    }
-
-    public function setDestino(string $destino) : void 
-    {
-        $this->destino = $destino;
-    }
-
-    public function getDestino() : string 
-    {
-        return $this->destino;
+        return $this->rotasCadastradas = $rota;
     }
 
     public function setData(string $data) : void 

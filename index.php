@@ -6,7 +6,7 @@ require_once "./classes/Bilhete.php";
 require_once "./classes/LinhaAerea.php";
 require_once "./classes/Passageiro.php";
 require_once "./classes/Piloto.php";
-require_once "./classes/AviaoComercial.php";
+require_once "./classes/AviaoCarga.php";
 
 //Criando aeronava
 $boeing = new Aeronave("Boeing 373", 150, "Comercial", "Livre");

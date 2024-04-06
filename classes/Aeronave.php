@@ -55,6 +55,11 @@ class Aeronave
         return $this->status;
     }
 
+    public function propostaDeVoo() : string
+    {
+        return "Levar os " . $this->getCapacidade() . " passageiros do ponto A para o ponto B";
+    }
+
     // public function decolar(): void {
 
     // }

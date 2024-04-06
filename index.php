@@ -6,6 +6,7 @@ require_once "./classes/Bilhete.php";
 require_once "./classes/LinhaAerea.php";
 require_once "./classes/Passageiro.php";
 require_once "./classes/Piloto.php";
+require_once "./classes/AviaoComercial.php";
 
 //Criando aeronava
 $boeing = new Aeronave("Boeing 373", 150, "Comercial", "Livre");
@@ -29,6 +30,17 @@ echo $pablomarcal->getNome();
 $gol->setRotasCadastradas("SP - RJ");
 
 print_r($gol->getRotasCadastradas());
+
+$cargueiro = new AviaoCarga("Aviao  de Carga", 8, "Carga", "Ativo");
+$cargueiro->addMercadorias("Equipamentos Eletrônicos", 12000);
+$cargueiro->addMercadorias("CELULAR DA XIAOMI", 500);
+$cargueiro->addMercadorias("Air Jordan", 53000);
+$cargueiro->getMercadorias();
+
+//echo $boeing->propostaDeVoo();
+
+echo $cargueiro->propostaDeVoo();
+
 
 //foreach ($gol->getRotasCadastradas() as $rota) {
 //    echo $rota;
